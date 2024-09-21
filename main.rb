@@ -6,15 +6,8 @@ def bubble_sort(array)
       if num > array[idx + 1]
         array[idx], array[idx + 1] = array[idx + 1], array[idx]
         swap = true
-      else 
-        if last_iteration == idx + 1
-          break
-        end
-        next
       end
-      if last_iteration == idx + 1
-          break
-      end
+      break if last_iteration == idx + 1
     end
     return array if swap == false
     swap = false
@@ -23,8 +16,8 @@ def bubble_sort(array)
  array
 end 
 
-bubble_sort([4,3,78,2,0,2])
+p bubble_sort([4,3,78,2,0,2])
 # => [0, 2, 2, 3, 4, 78]
 
-bubble_sort([5,4,3,2,1])
+p bubble_sort([5,4,3,2,1])
 # => [1, 2, 3, 4, 5]
